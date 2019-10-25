@@ -1,7 +1,7 @@
 version: "3"
 services:
   pmm-server:
-    image: "percona/pmm-server:latest"
+    image: "percona/pmm-server:1.17.1"
     ports:
      - "80:80"
      - "443:443"
@@ -17,7 +17,7 @@ services:
      - "3306:3306"
 
   pmm-client-ps:
-    image: "perconalab/pmm-client:dev-latest"
+    image: "perconalab/pmm-client:1.17.1"
     environment:
      - PMM_SERVER=pmm-server:443
      - PMM_USER=pmm
